@@ -55,7 +55,7 @@
       1. Pull Requset가 생성이 되면 같으 팀원들에게 Message가 전달된다. (구체적으로 메시지를 작성해야)
       2. Message를 받은 팀원들으 Code Review를 하고 Merge여부를 결정한다.
       3. Merge 된 code를 git pull 명령을 통해서 동기화를 진행한다.
-      4, 목적을 달성한 branch는 삭제한다.
+      4. 목적을 달성한 branch는 삭제한다.
     
 
 
