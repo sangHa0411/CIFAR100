@@ -31,4 +31,11 @@
     * 되돌리기
       1. git log로 commit Hash 확인
       2. git revert 복사한 Hash
-  * 
+  * 원격저장소 
+    * 원격저장소 전체 복제 : git clone 주소 <로컬 디렉토리>
+    * 원격저장소에 저장 
+      1. git commit -m "Message"
+      2. git push 
+    * 원격저장소로부터 받기 
+      1. 디렉토리 이동
+      2. git pull 
