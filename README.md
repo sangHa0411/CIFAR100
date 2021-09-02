@@ -12,7 +12,7 @@
   3. unittest
   4. AutoML
 
-## Git
+## Git 명령어
   * Start
     * 시작 : git init
     * 깃허브 연결 : git remote add origin <github 주소>
@@ -42,7 +42,7 @@
 
 ---
 
-## Git 활용 구조(경험)
+## Git 사용 방향
 
   0. register local ssh public key to github
   1. git clone <repo ssh>
