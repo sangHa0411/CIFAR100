@@ -39,3 +39,18 @@
     * 원격저장소로부터 받기 
       1. 디렉토리 이동
       2. git pull 
+
+---
+
+## Git 활용 구조(경험)
+
+  0. register local ssh public key to github
+  1. git clone <repo ssh>
+  2. git branch <my branch>
+  3. programming in local workspace
+  4. git add "file"
+  5. git commit -m "message"
+  6. git push
+  7. Make Pull Request
+
+
