@@ -1,4 +1,4 @@
-# CIFAR100
+# CIFAR100 Image Classification
 
 ## Modules
 ```
