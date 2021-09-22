@@ -8,7 +8,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from torch.optim.lr_scheduler import CosineAnnealingLR
 import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
@@ -94,7 +93,7 @@ def train(args) :
     optimizer = optim.SGD(model.parameters(), lr=args.init_lr, momentum=0.9)
 
     # -- Scheduler
-    scheduler = CosineAnnealingLR(optimizer, T_max=args.iteration, eta_min=args.min_lr)
+    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.5)
     
     # -- Logging
     writer = SummaryWriter(args.log_dir)
@@ -175,11 +174,8 @@ if __name__ == '__main__' :
     parser.add_argument('--seed', type=int, default=777, help='random seed (default: 777)')
     parser.add_argument('--epochs', type=int, default=50, help='number of epochs to train (default: 50)')
     parser.add_argument('--img_size', type=int, default=224, help='input image size (default: 224)')
-    parser.add_argument('--model', type=int, default=34, help='model layer size of resnet(18 or 34)')
-    parser.add_argument('--iteration', type=int, default=5, help='max iteration of cosine annealing scheudler')
-    parser.add_argument('--init_lr', type=float, default=2.5e-4, help='initial learning rate')
-    parser.add_argument('--min_lr', type=float, default=1e-7, help='minimum learning rate')
-    parser.add_argument('--batch_size', type=int, default=128, help='input batch size for training (default: 128)')
+    parser.add_argument('--init_lr', type=float, default=1e-2, help='initial learning rate')
+    parser.add_argument('--batch_size', type=int, default=64, help='input batch size for training (default: 64)')
     # Container environment
     parser.add_argument('--model_dir', type=str, default='./Model')
     parser.add_argument('--log_dir' , type=str , default='./Log')
