@@ -22,19 +22,21 @@
 ## Model Specification
   1. Total layer size : 34
   2. Input image size : 224
-  3. Layer size list : [3, 4, 6, 3]
-  4. Channel size list : [64, 128, 256, 512]
-  5. Kernal size : 3
-  6. Class size : 100
+  3. Input channel size : 64
+  4. Input kernal size : 7
+  5. Layer size list : [3, 4, 6, 3]
+  6. Channel size list : [64, 128, 256, 512]
+  7. Kernal size : 3
+  8. Class size : 100
 
 ## Training 
   1. Optimizer : SGD (momentum = 0.9)
-  2. Scheudler : CosineAnnealingLR
-      * Init learning rate : 2.5e-4
-      * Mininum learning rate : 1e-7
-      * Max iteration : 5
-  3. Epochs : 50
-  4. Batch size : 128
+  2. Scheudler : StepLR
+      * Init learning rate : 1e-2
+      * Step Size : 5
+      * Gamma = 0.5
+  3. Epochs : 60
+  4. Batch size : 64
 
 ## Data 
   1. CIFAR100
