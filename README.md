@@ -4,11 +4,6 @@
 ```
 |-- Data
 |   |-- cifar-100-python
-|   |   |-- file.txt~
-|   |   |-- meta
-|   |   |-- test
-|   |   `-- train
-|   `-- cifar-100-python.tar.gz
 |-- Log
 |-- Model
 |   `-- resnet_cifar100.pt
